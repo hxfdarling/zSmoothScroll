@@ -1,0 +1,16 @@
+{
+  "name": "zSmoothScroll",
+  "version": "1.0.0",
+  "description": "zSmoothScroll is smooth scroll component for web",
+  "main": "zSmoothScroll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "smooth",
+    "scroll",
+    "zSmoothScroll"
+  ],
+  "author": "zman",
+  "license": "ISC"
+}
