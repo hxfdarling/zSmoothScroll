@@ -106,7 +106,6 @@
 				scrollX = this.__target.scrollLeft(),
 				scrollY = this.__target.scrollTop();
 			var delta, item, finished, elapsed, position;
-			var scrollWindow = (this.__target[0] === document.body);
 			for (var i = 0; i < que.length; i++) {
 				item = que[i];
 				elapsed = now - item.start;
@@ -142,15 +141,11 @@
 				scrollY = scroll;
 			}
 			// scroll left and top
-			if (scrollWindow) {
-				window.scrollBy(scrollX, scrollY);
-			} else {
-				if (this.__dir === 'x') {
-					this.__target[0].scrollLeft += scrollX;
-				}
-				else {
-					this.__target[0].scrollTop += scrollY;
-				}
+			if (this.__dir === 'x') {
+				this.__target[0].scrollLeft += scrollX;
+			}
+			else {
+				this.__target[0].scrollTop += scrollY;
 			}
 			if (que.length) {
 				requestAnimationFrameHelper.call(window, bind(this.step, this));
