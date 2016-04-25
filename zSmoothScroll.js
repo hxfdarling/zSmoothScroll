@@ -186,7 +186,7 @@
 		}
 	};
 	function doScroll($el, options) {
-		var animate = $el.data('smoothScroll-' + options.dir);
+		var animate = $el.data('zSmoothScroll-' + options.dir);
 		if (animate) {
 			animate.update(options);
 		} else {
@@ -196,7 +196,7 @@
 		if (!animate.scrolling()) {
 			animate.start();
 		}
-		$el.data('smoothScroll-' + options.dir, animate);
+		$el.data('zSmoothScroll-' + options.dir, animate);
 	}
 
 	/**
